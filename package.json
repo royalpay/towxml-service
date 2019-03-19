@@ -1,0 +1,28 @@
+{
+  "name": "towxml-service",
+  "version": "1.0.0",
+  "description": "towxml-service",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/royalpay/towxml-service.git"
+  },
+  "author": "bruceLi",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/royalpay/towxml-service/issues"
+  },
+  "homepage": "https://github.com/royalpay/towxml-service#readme",
+  "dependencies": {
+    "express": "^4.16.2"
+  },
+  "devDependencies": {
+    "mocha": "^4.1.0",
+    "should": "^13.2.0",
+    "supertest": "^3.0.0",
+    "towxml": ""
+  }
+}
