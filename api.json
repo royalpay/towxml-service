@@ -1,0 +1,179 @@
+{
+  "front-version": "2.19.1",
+  "version": 3,
+  "nodes": [
+    {
+      "type": "Project",
+      "id": "a5823a6c-c4b6-4b52-b166-05e2d27f0f1f",
+      "lastModified": "2019-03-19T19:50:01.434+08:00",
+      "name": "towxml-app"
+    },
+    {
+      "type": "Service",
+      "id": "ad456ba3-c252-4b23-8f6b-03a4f36e89d6",
+      "lastModified": "2019-03-19T16:48:46.094+08:00",
+      "name": "01home",
+      "parentId": "a5823a6c-c4b6-4b52-b166-05e2d27f0f1f"
+    },
+    {
+      "type": "Request",
+      "method": {
+        "link": "http://tools.ietf.org/html/rfc7231#section-4.3.1",
+        "name": "GET"
+      },
+      "body": {
+        "formBody": {
+          "overrideContentType": true,
+          "encoding": "application/x-www-form-urlencoded",
+          "items": []
+        },
+        "bodyType": "Text",
+        "autoSetLength": true
+      },
+      "headersType": "Form",
+      "uri": {
+        "query": {
+          "delimiter": "&",
+          "items": []
+        },
+        "scheme": {
+          "name": "http",
+          "version": "V11"
+        },
+        "host": "${host}:${port}",
+        "path": "/"
+      },
+      "id": "3641c815-d548-43dc-b5ec-9f19b8d1a587",
+      "lastModified": "2019-03-19T19:50:01.435+08:00",
+      "name": "01home",
+      "headers": [],
+      "metaInfo": {},
+      "parentId": "ad456ba3-c252-4b23-8f6b-03a4f36e89d6"
+    },
+    {
+      "type": "Service",
+      "id": "baca0d98-2854-4b63-94b7-4e8d4f6eca7a",
+      "lastModified": "2019-03-19T17:28:36.749+08:00",
+      "name": "02towxml",
+      "parentId": "a5823a6c-c4b6-4b52-b166-05e2d27f0f1f"
+    },
+    {
+      "type": "Request",
+      "method": {
+        "requestBody": true,
+        "link": "http://tools.ietf.org/html/rfc7231#section-4.3.3",
+        "name": "POST"
+      },
+      "body": {
+        "formBody": {
+          "overrideContentType": true,
+          "encoding": "application/x-www-form-urlencoded",
+          "items": [
+            {
+              "enabled": true,
+              "type": "Text",
+              "name": "content",
+              "value": "<p><strong>哇哈哈哈哈哈哈</strong></p> <ul> <li>新疆顶顶顶顶</li> <li>to do list</li> </ul> <p><strong>二、要强、做大</strong></p> <p style=\"text-align: right;\">非常强非常强非常强非常强非常强非常强非常强非常强非常强非常强非常强非常强非常强</p> <p style=\"text-align: center;\"><span style=\"background-color: #ff0000;\">非常强非常强非常强非常强非常强非常强非常强非常强非常强非常强非常强非常强非常强</span></p> <p style=\"text-align: center;\"><span style=\"color: #000080;\">非常强非常强</span></p> <p style=\"text-align: center;\"><span style=\"color: #000080;\"><img src=\"https://timgsa.baidu.com/timg?image&amp;quality=80&amp;size=b9999_10000&amp;sec=1553000041954&amp;di=11d8c0e30dc24313c006e79001c74396&amp;imgtype=0&amp;src=http%3A%2F%2Fpic.58pic.com%2F58pic%2F13%2F40%2F15%2F83V58PICyKZ_1024.jpg\" alt=\"\" width=\"1024\" height=\"768\" /></span></p>"
+            }
+          ]
+        },
+        "bodyType": "Form",
+        "autoSetLength": true,
+        "textBody": "<h1>adfadfadfArticle title</h1>"
+      },
+      "headersType": "Form",
+      "uri": {
+        "query": {
+          "delimiter": "&",
+          "items": []
+        },
+        "scheme": {
+          "name": "http",
+          "version": "V11"
+        },
+        "host": "${host}:${port}",
+        "path": "/html2wxml"
+      },
+      "id": "35a91062-d3bf-4d75-bad2-5b9686fd9f2b",
+      "lastModified": "2019-03-19T19:44:51.392+08:00",
+      "name": "html2wxml",
+      "headers": [
+        {
+          "enabled": true,
+          "name": "Content-Type",
+          "value": "application/x-www-form-urlencoded"
+        }
+      ],
+      "metaInfo": {},
+      "parentId": "baca0d98-2854-4b63-94b7-4e8d4f6eca7a"
+    },
+    {
+      "type": "Request",
+      "method": {
+        "requestBody": true,
+        "link": "http://tools.ietf.org/html/rfc7231#section-4.3.3",
+        "name": "POST"
+      },
+      "body": {
+        "formBody": {
+          "overrideContentType": true,
+          "encoding": "application/x-www-form-urlencoded",
+          "items": [
+            {
+              "enabled": true,
+              "type": "Text",
+              "name": "content",
+              "value": "# Article title"
+            }
+          ]
+        },
+        "bodyType": "Form",
+        "autoSetLength": true,
+        "textBody": "<h1>adfadfadfArticle title</h1>"
+      },
+      "headersType": "Form",
+      "uri": {
+        "query": {
+          "delimiter": "&",
+          "items": []
+        },
+        "scheme": {
+          "name": "http",
+          "version": "V11"
+        },
+        "host": "${host}:${port}",
+        "path": "/markdown2wxml"
+      },
+      "id": "f98e1ad4-447b-4ce8-9f55-7d1451a5da1a",
+      "lastModified": "2019-03-19T19:49:55.183+08:00",
+      "name": "markdown2wxml",
+      "headers": [
+        {
+          "enabled": true,
+          "name": "Content-Type",
+          "value": "application/x-www-form-urlencoded"
+        }
+      ],
+      "metaInfo": {},
+      "parentId": "baca0d98-2854-4b63-94b7-4e8d4f6eca7a"
+    },
+    {
+      "type": "Context",
+      "id": "652ce963-b2da-416c-b614-63a2f25e4f3f",
+      "lastModified": "2019-03-19T19:43:49.338+08:00",
+      "name": "towxml",
+      "variables": [
+        {
+          "enabled": true,
+          "name": "host",
+          "value": "192.168.0.88"
+        },
+        {
+          "enabled": true,
+          "name": "port",
+          "value": "9600"
+        }
+      ]
+    }
+  ]
+}
